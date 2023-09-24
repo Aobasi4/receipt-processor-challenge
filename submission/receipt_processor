@@ -72,7 +72,7 @@ def description_points(prototype):
     return total
 
 def day_points(prototype):
-    date = prototype['purchaseDate']
+    date = datetime(prototype['purchaseDate'])
     day = int(date.strftime("%d"))
 
     if day % 2 != 0:
@@ -83,7 +83,7 @@ def day_points(prototype):
 def time_points(prototype): 
     #retrun 10 points if the time of purchase is after 2 and before 4
 
-    date = prototype['purchaseDate']
+    date = datetime(prototype['purchaseDate'])
     hour = int(date.strftime("%H"))
     minute = int(date.strftime("%M"))
 
